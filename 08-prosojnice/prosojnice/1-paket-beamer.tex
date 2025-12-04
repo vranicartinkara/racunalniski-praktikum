@@ -21,12 +21,19 @@
 	% Naloga 2.3.2:
 	% Oblikujte poudarjena bloka z opombo in opozorilom.
 
-		Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
 
-		Začetek poudarjenega bloka (ukaz \texttt{begin}) vedno sprejme 
-		dva parametra: okolje in naslov bloka.
-		Drugi parameter (za naslov) je lahko prazen. 
+\begin{block}{Opomba}
+			Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
+	
+\end{block}
 
+		
+		\begin{alertblock}{Pozor!}
+			Začetek poudarjenega bloka (ukaz \texttt{begin}) vedno sprejme 
+			dva parametra: okolje in naslov bloka.
+			Drugi parameter (za naslov) je lahko prazen. 
+	
+		\end{alertblock}
 \end{frame}
 
 \begin{frame}{Tudi v predstavitvah lahko pišemo izreke in dokaze}
@@ -42,7 +49,7 @@
 	   Denimo, da je praštevil končno mnogo.
 	   	% S pomožnim parametrom <+-> lahko določimo, da se bodo 
 		% elementi naštevanja odkrivali postopoma.
-	   \begin{itemize}
+	   \begin{itemize}[<+->]
 		  \item Naj bo $p$ \alert{največje} praštevilo.
 		  \item Naj bo $q$ produkt števil $1$, $2$, \ldots, $p$.
 		  \item Število $q+1$ ni deljivo z nobenim praštevilom, torej je $q+1$ praštevilo.

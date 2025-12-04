@@ -7,9 +7,9 @@
 % Naloga 1.3.3: definirajte okolji `definicija' in `izrek'.
 % Namig: z iskanjem po datotekah (Ctrl+Shift+F oz. Cmd+Shift+F) 
 % poiščite niz `{definicija}' ali niz `{izrek}'.
-\usepackage{amsthm}
-\usepackage{amsfonts}
-\usepackage{amsthm}
+%\usepackage{amsthm}
+%\usepackage{amsfonts}
+%\usepackage{amsthm}
 
 \newtheorem{definicija}{Definicija}
 \newtheorem{izrek}{Izrek}
@@ -22,73 +22,82 @@
 
 \usepackage{array} %za tebele da se stolpci postopoma odkriva
 
+
+
+\begin{document}
+
 \title{Matematični izrazi in uporaba paketa \texttt{beamer}}
 \subtitle{\emph{Matematičnih} nalog ni treba reševati!}
 \author{Fakulteta za matematiko in fiziko}
 \date{}
 
-\begin{document}
-
-% Naloga 1.3.4: pripravite naslovno stran z vsebino:
-\frame{\titlepage}
-
-\begin{frame}{Kratek pregled} % [pausesections]
-    \tableofcontents[hideallsubsections]
+\begin{frame}
+    \titlepage
 \end{frame}
 
-\section{Paket \texttt{beamer}}
+\begin{frame}
+    \frametitle{Kratek pregled}
+    \tableofcontents%[pausesections]
+\end{frame}
+
+% Naloga 1.3.4: pripravite naslovno stran z vsebino:
+
+
+
+%\section{Paket \texttt{beamer}}
+%\input{prosojnice/1-paket-beamer.tex}
 
 
 %\begin{frame}{Paket \texttt{beamer}}
 %   Osnovne informacije o beamerju
 %\end{frame}
 
-\section{Paket \texttt{beamer}}
-\begin{frame}{Posebnosti prosojnic}
+%\section{Paket \texttt{beamer}}
+%\begin{frame}{Posebnosti prosojnic}
 %    Za lepše matematične izraze
 %Za prosojnice je značilna uporaba okolja \texttt{frame},
 %s katerim definiramo posamezno prosojnico,
-\pause
+%\pause
 %postopno odkrivanje prosojnic,
-\pause
+%\pause
 
 %ter nekateri drugi ukazi, ki jih najdemo v paketu \texttt{beamer}.
-\pause
+%\pause
 
-\begin{exampleblock}{Primer}
-    %Verjetno ste že opazili, da za naslovno prosojnico niste uporabili
-    %ukaza \texttt{maketitle}, ampak ukaz \texttt{titlepage}.
-\end{exampleblock}
-\end{frame}
-
-\begin{frame}{Poudarjeni bloki}
-   
-    \begin{block}{Opomba}
-        \end{block}
-
-        Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
-\begin{alertblock}{Pozor!}
-%Začetek poudarjenega bloka (ukaz begin) vedno sprejme dva parametra: okolje in naslov bloka. Drugi parameter (za naslov) je lahko prazen.
-\end{alertblock}
-
-\end{frame}
-
-\begin{frame}{Tudi v predstavitvah lahko pišemo izreke in dokaze}
-\begin{izrek}
-    Praštevil je neskončno mnogo.
-\end{izrek}
-
-\begin{proof}
-    Denimo, da je praštevil končno mnogo.
-   
-    \begin{itemize}[<+->]
-        \item Naj bo $p$ \alert<4>{največje} praštevilo.
-        \item Naj bo $q$ produkt števil $1$, $2$, $\dots$, $p$.
-        \item Število $q+1$ ni deljivo z nobenim praštevilom, torej je $q+1$ praštevilo.
-        \item To je protislovje, saj je $q+1 > p$.
-    \end{itemize}
-\end{proof}
-\end{frame}
+%\begin{exampleblock}{Primer}
+%    %Verjetno ste že opazili, da za naslovno prosojnico niste uporabili
+%    %ukaza \texttt{maketitle}, ampak ukaz \texttt{titlepage}.
+%\end{exampleblock}
+%\end{frame}
+%
+%\begin{frame}{Poudarjeni bloki}
+%   
+%    \begin{block}{Opomba}
+%        \end{block}
+%
+%        Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
+%\begin{alertblock}{Pozor!}
+%%Začetek poudarjenega bloka (ukaz begin) vedno sprejme dva parametra: okolje in naslov bloka. Drugi parameter (za naslov) je lahko prazen.
+%\end{alertblock}
+%
+%\end{frame}
+%
+%\begin{frame}{Tudi v predstavitvah lahko pišemo izreke in dokaze}
+%\begin{izrek}
+%    Praštevil je neskončno mnogo.
+%\end{izrek}
+%
+%\begin{proof}
+%    Denimo, da je praštevil končno mnogo.
+%   
+%    \begin{itemize}[<+->]
+%        \item Naj bo $p$ \alert<4>{največje} praštevilo.
+%        \item Naj bo $q$ produkt števil $1$, $2$, $\dots$, $p$.
+%        \item Število $q+1$ ni deljivo z nobenim praštevilom, torej je $q+1$ praštevilo.
+%        \item To je protislovje, saj je $q+1 > p$.
+%    \end{itemize}
+%\end{proof}
+%\end{frame}
 
 
 % - naslov: Matematični izrazi in uporaba paketa \texttt{beamer}
@@ -113,171 +122,171 @@
 \section{Paketa \texttt{amsmath} in \texttt{amsfonts}}
 \input{prosojnice/2-paketa-amsmath-amsfonts.tex}
 
-\begin{frame}{Matrike}
-    \frametitle{Matrike}
-    Izračunajte determinanto
-    \[
-    \begin{vmatrix}
-    -1 & 4 & 4 & -2 \\
-    1 & 4 & 5 & -1 \\
-    1 & 4 & -2 & 2 \\
-    3 & 8 & 4 & 3
-    \end{vmatrix}\]
-
-    V pomoč naj vam bo Overleaf dokumentacija o matrikah:
-
-\href{https://www.overleaf.com/learn/latex/Matrices}{\beamergotobutton{Matrices}}
-\end{frame}
-
-% PRVA PROSOJNICA - samo prva enačba
-\begin{frame}{Okolje align in align*}
-Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
-
-\[
-(a + b)^n = \cdots
-\]
-\[
-= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
-\]
-\end{frame}
-
-% DRUGA PROSOJNICA - prva + druga enačba
-\begin{frame}{Okolje align in align*}
-Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
-
-\[
-(a + b)^n = (a + b)(a + b) \ldots (a + b)
-\]
-\[
-= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
-\]
-\end{frame}
-
-% TRETJA PROSOJNICA - vse tri enačbe
-\begin{frame}{Okolje align in align*}
-Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
-
-\[
-(a + b)^n = (a + b)(a + b) \ldots (a + b)
-\]
-\[
-= a^n + na^{n-1}b + \ldots + \binom{n}{k}a^{n-k}b^k + \ldots + nab^{n-1} + b^n
-\]
-\[
-= \sum_{k=0}^n \binom{n}{k}a^{n-k}b^k
-\]
-\end{frame}
-
-\begin{frame}{Še ena uporaba okolja \texttt{align*}}
-\textbf{Nariši grafe funkcij:}
-
-\begin{align*}
-y &= x^2 - 3|x| + 2 &\qquad y &= 3\sin(\pi + x) - 2 \\
-y &= \log_2(x - 2) + 3 &\qquad y &= 2\sqrt{x^2 + 15} + 6 \\
-y &= 2^{x-3} + 1 &\qquad y &= \cos(x - 3) + \sin^2(x + 1)
-\end{align*}
-
-\end{frame}
-
-\begin{frame}{Okolje multline}
-Poišči vse rešitve enačbe
-
-\begin{multline*}
-(1 + x + x^2) \cdot (1 + x + x^2 + x^3 + \ldots + x^9 + x^{10}) = \\
-= (1 + x + x^2 + x^3 + x^4 + x^5 + x^6)^2.
-\end{multline*}
-
-\end{frame}
-
-\begin{frame}{Okolje cases}
-\frametitle{Dana je funkcija}
-
-\[
-f(x, y) =
-\begin{cases}
-\dfrac{3x^2y - y^3}{x^2 + y^2}, & (x, y) \neq (0, 0), \\
-a, & (x, y) = (0, 0).
-\end{cases}
-\]
-
-\begin{itemize}
-\item \textbf{Določi} $a$, tako da izračunaš limito $\displaystyle \lim_{(x, y) \to (0, 0)} f(x, y)$.
-\item \textbf{Izračunaj parcialna odvoda} $f_x(x, y)$ in $f_y(x, y)$.
-\end{itemize}
-
-\end{frame}
+%\begin{frame}{Matrike}
+%    \frametitle{Matrike}
+%    Izračunajte determinanto
+%    \[
+%    \begin{vmatrix}
+%    -1 & 4 & 4 & -2 \\
+%    1 & 4 & 5 & -1 \\
+%    1 & 4 & -2 & 2 \\
+%    3 & 8 & 4 & 3
+%    \end{vmatrix}\]
+%
+%    V pomoč naj vam bo Overleaf dokumentacija o matrikah:
+%
+%\href{https://www.overleaf.com/learn/latex/Matrices}{\beamergotobutton{Matrices}}
+%\end{frame}
+%
+%% PRVA PROSOJNICA - samo prva enačba
+%\begin{frame}{Okolje align in align*}
+%Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
+%
+%\[
+%(a + b)^n = \cdots
+%\]
+%\[
+%= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
+%\]
+%\end{frame}
+%
+%% DRUGA PROSOJNICA - prva + druga enačba
+%\begin{frame}{Okolje align in align*}
+%Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
+%
+%\[
+%(a + b)^n = (a + b)(a + b) \ldots (a + b)
+%\]
+%\[
+%= \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
+%\]
+%\end{frame}
+%
+%% TRETJA PROSOJNICA - vse tri enačbe
+%\begin{frame}{Okolje align in align*}
+%Dokaži \emph{binomsko formulo}: za vsaki realni števili $a$ in $b$ in za vsako naravno število $n$ velja
+%
+%\[
+%(a + b)^n = (a + b)(a + b) \ldots (a + b)
+%\]
+%\[
+%= a^n + na^{n-1}b + \ldots + \binom{n}{k}a^{n-k}b^k + \ldots + nab^{n-1} + b^n
+%\]
+%\[
+%= \sum_{k=0}^n \binom{n}{k}a^{n-k}b^k
+%\]
+%\end{frame}
+%
+%\begin{frame}{Še ena uporaba okolja \texttt{align*}}
+%\textbf{Nariši grafe funkcij:}
+%
+%\begin{align*}
+%y &= x^2 - 3|x| + 2 &\qquad y &= 3\sin(\pi + x) - 2 \\
+%y &= \log_2(x - 2) + 3 &\qquad y &= 2\sqrt{x^2 + 15} + 6 \\
+%y &= 2^{x-3} + 1 &\qquad y &= \cos(x - 3) + \sin^2(x + 1)
+%\end{align*}
+%
+%\end{frame}
+%
+%\begin{frame}{Okolje multline}
+%Poišči vse rešitve enačbe
+%
+%\begin{multline*}
+%(1 + x + x^2) \cdot (1 + x + x^2 + x^3 + \ldots + x^9 + x^{10}) = \\
+%= (1 + x + x^2 + x^3 + x^4 + x^5 + x^6)^2.
+%\end{multline*}
+%
+%\end{frame}
+%
+%\begin{frame}{Okolje cases}
+%\frametitle{Dana je funkcija}
+%
+%\[
+%f(x, y) =
+%\begin{cases}
+%\dfrac{3x^2y - y^3}{x^2 + y^2}, & (x, y) \neq (0, 0), \\
+%a, & (x, y) = (0, 0).
+%\end{cases}
+%\]
+%
+%\begin{itemize}
+%\item \textbf{Določi} $a$, tako da izračunaš limito $\displaystyle \lim_{(x, y) \to (0, 0)} f(x, y)$.
+%\item \textbf{Izračunaj parcialna odvoda} $f_x(x, y)$ in $f_y(x, y)$.
+%\end{itemize}
+%
+%\end{frame}
 
 
 \section[Matematika, 1. del\\\large{Analiza, logika, množice}]{Matematika, 1. del}
 \input{prosojnice/3-analiza-logika-mnozice.tex}
 
-\begin{frame}{Logika in množice}
-\begin{enumerate}
-\item
-Poišči preneksno obliko formule  
-\[ \exists x : P(x) \land \forall x : Q(x) \Rightarrow \forall x : R(x). \]
-
-\item
-Definiramo množici $A = [2, 5]$ in $B = \{0, 1, 2, 3, 4 \ldots\}$.  
-V ravnino nariši:
-\begin{enumerate}
-   \item $A \cap B \times \emptyset$
-   \item $(A \cup B)^c \times \mathbb{R}$
-\end{enumerate}
-
-\item
-Dokaži:
-\begin{itemize}
-    \item $(A \Rightarrow B) \sim (\neg B \Rightarrow \neg A)$
-    \item $\neg(A \lor B) \sim \neg A \land \neg B$
-\end{itemize}
-\end{enumerate}
-\end{frame}
-
-\begin{frame}{Analiza}
-\begin{enumerate}
-\item
-Pokaži, da je funkcija $x \mapsto \sqrt{x}$ enakomerno zvezna na $[0, \infty)$.
-
-\item
-Katero krivuljo določa sledeč parametričen zapis?
-\[
-   x(t) = a \cos t, \quad
-   y(t) = b \sin t, \quad
-   t \in [0, 2\pi]
-\]
-
-\item
-Pokaži, da ima $f(x) = 3x + \sin(2x)$ inverzno funkcijo in izračunaj $(f^{-1})'(3\pi)$.
-
-\item
-Izračunaj integral
-\[
-\int \frac{2 + \sqrt{x+1}}{(x+1)^2 - \sqrt{x+1}} \, dx
-\]
-
-\item
-Naj bo $g$ zvezna funkcija. Ali posplošeni integral
-\[
-\int_0^1 \frac{g(x)}{x^2} \, dx
-\]
-konvergira ali divergira? Utemelji.
-\end{enumerate}
-\end{frame}
-
-\begin{frame}{Kompleksna števila}
-\begin{enumerate}
-\item
-Naj bo $z$ kompleksno število, $z \neq 1$ in $|z| = 1$.  
-Dokaži, da je število \(\displaystyle i \frac{z+1}{z-1} \) realno.
-
-\item
-Poenostavi izraz:
-\[
-\frac{3+i}{2-2i} + \frac{7i}{1+i} - \left(1 + \frac{i-1}{4} - \frac{5}{2-3i}\right)
-\]
-\end{enumerate}
-\end{frame}
+%\begin{frame}{Logika in množice}
+%\begin{enumerate}
+%\item
+%Poišči preneksno obliko formule  
+%\[ \exists x : P(x) \land \forall x : Q(x) \Rightarrow \forall x : R(x). \]
+%
+%\item
+%Definiramo množici $A = [2, 5]$ in $B = \{0, 1, 2, 3, 4 \ldots\}$.  
+%V ravnino nariši:
+%\begin{enumerate}
+%   \item $A \cap B \times \emptyset$
+%   \item $(A \cup B)^c \times \mathbb{R}$
+%\end{enumerate}
+%
+%\item
+%Dokaži:
+%\begin{itemize}
+%    \item $(A \Rightarrow B) \sim (\neg B \Rightarrow \neg A)$
+%    \item $\neg(A \lor B) \sim \neg A \land \neg B$
+%\end{itemize}
+%\end{enumerate}
+%\end{frame}
+%
+%\begin{frame}{Analiza}
+%\begin{enumerate}
+%\item
+%Pokaži, da je funkcija $x \mapsto \sqrt{x}$ enakomerno zvezna na $[0, \infty)$.
+%
+%\item
+%Katero krivuljo določa sledeč parametričen zapis?
+%\[
+%   x(t) = a \cos t, \quad
+%   y(t) = b \sin t, \quad
+%   t \in [0, 2\pi]
+%\]
+%
+%\item
+%Pokaži, da ima $f(x) = 3x + \sin(2x)$ inverzno funkcijo in izračunaj $(f^{-1})'(3\pi)$.
+%
+%\item
+%Izračunaj integral
+%\[
+%\int \frac{2 + \sqrt{x+1}}{(x+1)^2 - \sqrt{x+1}} \, dx
+%\]
+%
+%\item
+%Naj bo $g$ zvezna funkcija. Ali posplošeni integral
+%\[
+%\int_0^1 \frac{g(x)}{x^2} \, dx
+%\]
+%konvergira ali divergira? Utemelji.
+%\end{enumerate}
+%\end{frame}
+%
+%\begin{frame}{Kompleksna števila}
+%\begin{enumerate}
+%\item
+%Naj bo $z$ kompleksno število, $z \neq 1$ in $|z| = 1$.  
+%Dokaži, da je število \(\displaystyle i \frac{z+1}{z-1} \) realno.
+%
+%\item
+%Poenostavi izraz:
+%\[
+%\frac{3+i}{2-2i} + \frac{7i}{1+i} - \left(1 + \frac{i-1}{4} - \frac{5}{2-3i}\right)
+%\]
+%\end{enumerate}
+%\end{frame}
 
 
 \section{Stolpci in slike}
