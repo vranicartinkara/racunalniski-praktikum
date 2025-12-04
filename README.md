@@ -41,4 +41,4 @@ Včasih pride prav značka <kbd>kbd</kbd> za tipke. Značko uporabimo takole:
 4. [Dokumentacija za Markdown na GitHubu](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## Spletna stran
-[Spletna stran](file:///Users/tinkaravranicar/racunalniski%20praktikum/vranicartinkara.github.io/index.html)
+https://vranicartinkara.github.io/ 
